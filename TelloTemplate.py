@@ -56,11 +56,15 @@ try:
     if ready.lower() == 'yes':
         print("\nStarting Drone!\n")
 
+
         sendmsg('command', 0)
         sendmsg('takeoff')
+        sendmsg('battery?')
 
-        # Review the (SDK) Software Development Kit resource for Drone Commands
-        # Delete these comments before writing your program
+
+        sendmsg('ccw 3')
+        sendmsg('forward 225')
+
 
         sendmsg('land')
 
@@ -70,6 +74,5 @@ try:
         print('\nMake sure you check WIFI, surroundings, co-pilot is ready, re-run program\n')
 except KeyboardInterrupt:
     sendmsg('emergency')
-
 breakr = True
 sock.close()
