@@ -73,10 +73,12 @@ try:
         # Pilot = Mya Reynolds - CoPilot - Brian Kuhn
         sendmsg('curve 125 125 0 0 250 0 50', 12)
         sendmsg('cw 180')
-        sendmsg('forward 40')
+        sendmsg('forward 40', 10)
 
         #Pilot = Mya Reynolds - CoPilot - Brian Kuhn
 
+        sendmsg('go 225 0 -75 50', 10)
+        sendmsg('forward 30')
 
         sendmsg('land')
         print('\nGreat Flight!!!')
