@@ -30,7 +30,7 @@ def recv():
             break
 
 
-def sendmsg(msg, sleep = 6):
+def sendmsg(msg, sleep = 8):
     print("Sending: " + msg)
     msg = msg.encode(encoding="utf-8")
     sock.sendto(msg, tello_address)
@@ -66,10 +66,14 @@ try:
         # sendmsg('up 55')
         # sendmsg('left 50')
         sendmsg('forward 225')
+
         # Pilot = Brian Kuhn - CoPilot = Mya Reynolds
-        sendmsg('go 225 0 75 50')
+        sendmsg('go 225 0 75 50', 10)
 
         # Pilot = Mya Reynolds - CoPilot - Brian Kuhn
+        sendmsg('curve 125 125 0 0 250 0 50', 12)
+        sendmsg('cw 180')
+        sendmsg('forward 40')
 
         #Pilot = Mya Reynolds - CoPilot - Brian Kuhn
 
