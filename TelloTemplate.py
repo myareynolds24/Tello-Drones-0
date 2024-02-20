@@ -61,13 +61,20 @@ try:
         sendmsg('takeoff')
         sendmsg('battery?')
 
-
+        # Pilot = Brian Kuhn - CoPilot = Mya Reynolds
         sendmsg('ccw 3')
+        # sendmsg('up 55')
+        # sendmsg('left 50')
         sendmsg('forward 225')
+        # Pilot = Brian Kuhn - CoPilot = Mya Reynolds
+        sendmsg('go 225 0 75 50')
+
+        # Pilot = Mya Reynolds - CoPilot - Brian Kuhn
+
+        #Pilot = Mya Reynolds - CoPilot - Brian Kuhn
 
 
         sendmsg('land')
-
         print('\nGreat Flight!!!')
 
     else:
